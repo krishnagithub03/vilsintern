@@ -34,8 +34,16 @@ const Navbar = () => {
     >
       <div className='w-full flex-col justify-center items-center max-w-7xl mx-auto'>
        <p className='text-black text-[20px] cursor-pointer flex justify-center'>Writing Test 7</p>
-       <p className='text-black text-[18px] cursor-pointer flex justify-center'>{date} at {time}</p>
+       <p className='text-black text-[15px] cursor-pointer flex justify-center'>{date} at {time}</p>
       </div>
+      {/* <div className='sm: flex flex-1 justify-end items-center'>
+          <div
+            className={`flex p-6absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+          <p className='text-black text-[20px] cursor-pointer flex justify-center'>Writing Test 7</p>
+       <p className='text-black text-[15px] cursor-pointer flex justify-center'>{date} at {time}</p>
+         </div>
+        </div>  */}
     </nav>
   );
 };

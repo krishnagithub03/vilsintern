@@ -18,12 +18,13 @@ const SideBar = () => {
   return (
   <div className={`${open ? "w-60" : "w-20" } duration-300 h-fit p-5 pt-8 bg-white shadow-md relative rounded-3xl`}>
     <img src={menu} alt="" 
-        className='absolute cursor-pointer rounded-full -right-3 top-9 w-8 border-2 bg-blue-500 border-none'
+        className='absolute cursor-pointer rounded-full -right-3 top-9 w-8 border-2 bg-blue-500 border-none z-50'
         onClick={()=> setOpen(!open)}
     />
     <div className='flex gap-x-4 items-center '>
         <img src={logo2} alt="" 
-            className={`cursor-pointer duration-500 object-scale-down w-20 h-20`}
+            className={`cursor-pointer duration-500 object-scale-down w-20 h-20
+            ${open && "rotate-[360deg]"}`}
         />
         {/* <h1 className={`text-black origin-left font-medium text-xl duration-300 ${!open && "scale-0" }`}>Dashboard</h1> */}
     </div>
@@ -31,7 +32,7 @@ const SideBar = () => {
         {menuTable.map((menu, index) =>(
             <li key={index} className={`text-black text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-tableshade rounded-2xl ${menu.gap ? "mt-9" : "mt-0"}`}>
             <img src={menu.src} alt="" />
-                <span className={`${!open && "hidden"}`}>{menu.title}</span>
+                <span className={`${!open && "hidden"} origin-left duration-200`}>{menu.title}</span>
             </li>
         ))}
     </ul>
