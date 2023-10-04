@@ -1,0 +1,16 @@
+import menu from "./menu.png"
+import bot from "./bot.png"
+import dashboard from "./dashboard.png"
+import book from "./open-book.png"
+import premium from "./premium-quality.png"
+import report from "./report (1).png"
+import settings from "./setting.png"
+import talk from "./talk.png"
+import test from "./test.png"
+import logo from "./vils_ait_logo.jpeg"
+import logo2 from "./logo_vils.jpg"
+import course from "./course.jpg"
+import resume from "./resume.jpg"
+import user from "./userlogo.jpg"
+
+export {menu, bot, dashboard, book, premium, report,settings, talk,test, logo, logo2, user, resume, course}
