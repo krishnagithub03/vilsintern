@@ -12,6 +12,7 @@ module.exports = {
         "black-200": "#090325",
         "white-100": "#f3f3f3",
         tableshade: "#0280D4",
+        bgres : "#BAE2FD",
 
       },
       boxShadow: {
