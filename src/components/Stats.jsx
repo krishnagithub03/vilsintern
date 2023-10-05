@@ -1,23 +1,17 @@
 import React,{useEffect, useState, useRef} from 'react'
 import { menu } from '../assets';
 import { logo2 } from '../assets';
-import { PieChart, Pie } from 'recharts';
+import { PieChart, Pie, Tooltip } from 'recharts';
 
 const Stats = () => {
   const data = [
-        { name: 'Correct', students: 700 , fill: "#40A8C4"},
-        { name: 'Not Correct', students: 100 , fill: "#BCDBDF"},
-        { name: 'Wrong', students: 200 , fill: "#235784"},
+        { name: 'Correct Answer', students: 700 , fill: "#40A8C4"},
+        { name: 'Not Answered', students: 100 , fill: "#BCDBDF"},
+        { name: 'Wrong Answer', students: 200 , fill: "#235784"},
     ];
-  const rectangleBox = (data)=>{
-      return(
-        <div width={10} height={10} className={data}>
-        </div>
-      )
-    }
     const [open ,setOpen] = useState(true);
   return (
-  <div className={`${open ? "w-72" : "w-12" } duration-300 h-fit my-10 p-2 pt-24 bg-white shadow-md rounded-3xl fixed right-0`}>
+  <div className={`${open ? "w-4/12" : "w-12" } duration-300 h-fit my-10 p-2 pt-24 bg-white shadow-md rounded-3xl fixed right-0`}>
     <img src={menu} alt="" 
         className='absolute cursor-pointer rounded-full left-3 top-9 w-8 border-2 bg-blue-500 border-none z-50'
         onClick={()=> setOpen(!open)}
@@ -32,11 +26,12 @@ const Stats = () => {
         {/* <h1 className={`text-black origin-left font-medium text-xl flex justify-center items-center text-center duration-300 ${!open && "scale-0" }`}>Result
         </h1> */}
         </div>
-      <div className='flex flex-col my-2 gap-y-4 object-scale-dow'>
+      <div className='flex flex-col my-2 gap-y-0 object-scale-dow'>
         <h1 className='text-black font-semibold'>Results:</h1>
         <h5 className='text-black font-semibold'>Score: 75%</h5>
-        <PieChart width={200} height={200}>
-            <Pie data={data} dataKey="students" outerRadius={50} fill={data} label={data} nameKey="name"/>
+        <PieChart width={350} height={300}>
+            <Pie data={data} dataKey="students" outerRadius={120} fill={data} label={data} nameKey="name"/>
+            <Tooltip/>
         </PieChart>
     </div>
     <div>
