@@ -12,5 +12,5 @@ import logo2 from "./logo_vils.jpg"
 import course from "./course.jpg"
 import resume from "./resume.jpg"
 import user from "./userlogo.jpg"
-
-export {menu, bot, dashboard, book, premium, report,settings, talk,test, logo, logo2, user, resume, course}
+import next from "./next.png"
+export {menu, bot, dashboard, book, premium, report,settings, talk,test, logo, logo2, user, resume, course, next}
