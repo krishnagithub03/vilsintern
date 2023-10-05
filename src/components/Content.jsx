@@ -1,18 +1,25 @@
 import React from 'react'
 import { PieChart, Pie, Label, Tooltip } from 'recharts';
-
+import {styles} from "../styles"
 
 const Content = () => {
-  const data = [
-        { name: 'Correct', students: 700 , fill: "#40A8C4"},
-        // { name: 'Not Correct', students: 100 , fill: "#BCDBDF"},
-        { name: 'Wrong', students: 200 , fill: "#235784"},
+  const data1 = [
+        { name: 'Scored', students: 700 , fill: "#0280D4"},
+        { name: 'No Score', students: 200 , fill: "#95D4FE"},
+    ];
+  const data2 = [
+        { name: 'Scored', students: 400 , fill: "#02BC63"},
+        { name: 'No Score', students: 600 , fill: "#94E1BC"},
+    ];
+  const data3 = [
+        { name: 'Scored', students: 800 , fill: "#EB5757"},
+        { name: 'No Score', students: 200 , fill: "#FFA9A9"},
     ];
 
   return (
     <div>
-    <div className={`mx-3 p-10 mt-12 ${!open ? "w-3/4" : "w-7/12"} duration-500`}>
-      Your Answer:
+    <div className={`mx-3 p-10 mt-12 ${!open ? "w-3/4" : "w-7/12"} ${styles.SmallSubText}duration-500`}>
+    <span className='font-bold flex py-1'>Your Answer:</span>
 The most challenging software for me is specifically to be specifically Telluride is Figma.
 Yeah. Figma and Adobe Illustrator, which is, uh they are quite nuance and constraints and, uh spill small, small things that needs to be learned up. Yeah. This question, it almost took months to a entire software of the Adobe Illustrator.
 The most challenging software for me is <span className='bg-red-400 p-1'>specifically</span>  to be specifically Telluride is Figma.
@@ -34,19 +41,18 @@ constraints and, uh spill small, small things that needs to be learned up.
         <div className='gap-y-4 z-10 flex flex-col'>
         <div className='flex flex-row'>
         <PieChart width={70} height={70}>
-            <Pie data={data} dataKey="students" outerRadius={30} 
-            innerRadius={20} fill={data} nameKey="name"
+            <Pie data={data1} dataKey="students" outerRadius={30} 
+            innerRadius={20} fill={data1} nameKey="name"
             />
             {/* <Label value="283" position="inside" className='text-black '/> */}
             <Tooltip/>
-        Score: 59%
         </PieChart>
         <span className='w-96 p-2'><strong className='font-bold'>Focus Score:</strong> Focus score refers to the ability of an individual to concentrate and direct their attention towards a specific task or information.</span>
         </div>
         <div className='flex flex-row'>
         <PieChart width={70} height={70}>
-            <Pie data={data} dataKey="students" outerRadius={30} 
-            innerRadius={20} fill={data} nameKey="name"
+            <Pie data={data2} dataKey="students" outerRadius={30} 
+            innerRadius={20} fill={data2} nameKey="name"
             />
             {/* <Label value="283" position="inside" className='text-black '/> */}
             <Tooltip/>
@@ -56,8 +62,8 @@ constraints and, uh spill small, small things that needs to be learned up.
         </div>
         <div className='flex flex-row'>
         <PieChart width={70} height={70}>
-            <Pie data={data} dataKey="students" outerRadius={30} 
-            innerRadius={20} fill={data} nameKey="name"
+            <Pie data={data3} dataKey="students" outerRadius={30} 
+            innerRadius={20} fill={data3} nameKey="name"
             />
             <Tooltip/>
         Score: 59%

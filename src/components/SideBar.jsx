@@ -13,7 +13,7 @@ const SideBar = () => {
         { title : "Premium", src : premium},
         { title : "Resume", src : resume},
         { title : "Course", src : course},
-        { title : "User", src : user, gap: true},
+        { title : "Username", src : user, gap: true},
     ];
   return (
   <div className={`${open ? "w-60" : "w-20" } duration-300 h-fit p-5 pt-8 bg-white shadow-md relative rounded-3xl`}>

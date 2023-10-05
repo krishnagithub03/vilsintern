@@ -21,7 +21,7 @@ const Stats = () => {
   return (
   <div className={`${open ? "w-4/12" : "w-12" } duration-300 h-fit my-10 p-2 pt-24 bg-white shadow-md rounded-3xl fixed right-0`}>
     <img src={next} alt="" 
-        className={`absolute cursor-pointer rounded-full left-3 top-9 w-8 border-2 bg-blue-500 border-none z-50 ${!open && "rotate-180"}`}
+        className={`absolute cursor-pointer rounded-full left-2 top-9 w-8 border-2 bg-blue-500 border-none z-50 ${!open && "rotate-180"}`}
         onClick={()=> setOpen(!open)}
     />
       <h1 className={`text-black bg-bgres origin-left font-bold text-sm flex py-2 justify-center items-center text-center z-10 duration-300 ${!open && "scale-0" }`}>Result
@@ -49,7 +49,7 @@ const Stats = () => {
         <span className='w-9 h-4 bg-[#235784] px-2'></span> <li>Wrong Answers</li>
     </ul>
     </div>
-    <hr className='shadow-sm'/>
+    <hr className={`shadow-sm ${!open && "hidden"} `}/>
   <div className={`${!open && "hidden"} origin-right duration-200`}>
    <table className="table table-bordered analysis-table">
       <thead>
